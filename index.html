@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% for person in site.data.content %}
+<div>
+  {{ person.name }}
+  {{ person.bio }}
+
+  <ol>
+  {% for artist in person.music %}
+    <li>{{ artist }}</li>
+  {% endfor %}
+  </ol>
+
+  {% for item in person %}
+    {{ item }}
+  {% endfor %}
+</div>
+{% endfor %}
